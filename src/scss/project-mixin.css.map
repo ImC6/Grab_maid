@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "project-mixin.scss",
+        "../module/stooges-variables.scss",
+        "../module/stooges-mixin.scss",
+        "project-variables.scss"
+    ],
+    "names": [],
+    "file": "project-mixin.css"
+}

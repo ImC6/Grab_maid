@@ -1,0 +1,33 @@
+$font-family-1-material:'Roboto,-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif'; //因为material 要string format，另外处理
+
+//media
+$min-xs : 1;    //mobile
+$max-xs : 420;  //mobile
+$min-sm : 421;  //tablet
+$max-sm : 768;  //tablet
+$min-md : 769;  //tablet
+$max-md : 1024; //tablet
+$min-lg : 1025; //pc
+$max-lg : 1364; //pc //should be 1366, only chrome will get this (maybe is 1920 to 1366 lose calc)
+$min-xl : 1365; //pc
+$max-xl : 9999; //pc
+
+
+//follow bootstrap naming conventions
+$breakpoint-up-xs :'(min-width: '+ $min-xs +'px)'; // 1 ~ *
+$breakpoint-up-sm :'(min-width: '+ $min-sm +'px)'; // 421 ~ *
+$breakpoint-up-md :'(min-width: '+ $min-md +'px)'; // 769 ~ *
+$breakpoint-up-lg :'(min-width: '+ $min-lg +'px)'; // 1025 ~ *
+$breakpoint-up-xl :'(min-width: '+ $min-xl +'px)'; // 1365 ~ *
+
+$breakpoint-down-xs : '(max-width: '+ $max-xs +'px)';   // 1 ~ 420
+$breakpoint-down-sm : '(max-width: '+ $max-sm +'px)';   // 1 ~ 768
+$breakpoint-down-md : '(max-width: '+ $max-md +'px)';   // 1 ~ 1024
+$breakpoint-down-lg : '(max-width: '+ $max-lg +'px)';   // 1 ~ 1364
+$breakpoint-down-xl : '(max-width: '+ $max-xl +'px)';   // 1 ~ 9999
+
+$breakpoint-only-xs : '(min-width: '+ $min-xs +'px) and (max-width: '+ $max-xs +'px)'; //0 ~ 420
+$breakpoint-only-sm : '(min-width: '+ $min-sm +'px) and (max-width: '+ $max-sm +'px)'; //421 ~ 768
+$breakpoint-only-md : '(min-width: '+ $min-md +'px) and (max-width: '+ $max-md +'px)'; //769 ~ 1024
+$breakpoint-only-lg : '(min-width: '+ $min-lg +'px) and (max-width: '+ $max-lg +'px)'; //1025 ~ 1364
+$breakpoint-only-xl : '(min-width: '+ $min-xl +'px) and (max-width: '+ $max-xl +'px)'; //1365 ~ 9999

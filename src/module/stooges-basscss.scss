@@ -1,0 +1,377 @@
+//common 
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+::-ms-input-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+   color: $placeholderColor;
+}
+::placeholder{
+    color: $placeholderColor;
+    opacity: 1;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+#modelBrowser {
+    display: none;
+}
+
+body {
+    font-family: $font-family-1;
+    font-size: $body-font-size;
+    color: $font-color-1;
+    background-color: $body-background-color;
+    min-width: 315px;
+    overflow-x: hidden;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+}
+
+a,
+.href {
+    color: $color-main;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        color: lighten( $color-main, 20%);
+        text-decoration: none;
+    }
+}
+
+label {
+    white-space: nowrap;
+    color: $font-color-2;
+}
+
+h1,.h1 {
+    font-family: $font-family-h1;
+    font-size: $h1;
+    font-weight: $font-weight-h1;
+    color:$color-h1;
+    line-height: $line-height-h1;
+    letter-spacing: $letter-spacing-h1;
+    margin:$margin-h1;
+}
+
+h2,.h2 {
+    font-family: $font-family-h2;
+    font-size: $h2;
+    font-weight: $font-weight-h2;
+    color:$color-h2;
+    line-height: $line-height-h2;
+    letter-spacing: $letter-spacing-h2;
+    margin:$margin-h2;
+}
+
+h3,.h3 {
+    font-family: $font-family-h3;
+    font-size: $h3;
+    font-weight: $font-weight-h3;
+    color:$color-h3;
+    line-height: $line-height-h3;
+    letter-spacing: $letter-spacing-h3;
+    margin:$margin-h3;
+}
+
+h4,.h4 {
+    font-family: $font-family-h4;
+    font-size: $h4;
+    font-weight: $font-weight-h4;
+    color:$color-h4;
+    line-height: $line-height-h4;
+    letter-spacing: $letter-spacing-h4;
+    margin:$margin-h4;
+}
+
+h5,.h5 {
+    font-family: $font-family-h5;
+    font-size: $h5;
+    font-weight: $font-weight-h5;
+    color:$color-h5;
+    line-height: $line-height-h5;
+    letter-spacing: $letter-spacing-h5;
+    margin:$margin-h5;
+}
+
+h6,.h6 {
+    font-family: $font-family-h6;
+    font-size: $h6;
+    font-weight: $font-weight-h6;
+    color:$color-h6;
+    line-height: $line-height-h6;
+    letter-spacing: $letter-spacing-h6;
+    margin:$margin-h6;
+}
+
+p {
+    font-family: $font-family-p;
+    font-weight: $font-weight-p;
+    color:$color-p;
+    line-height: $line-height-p;
+    letter-spacing: $letter-spacing-p;
+    margin:$margin-p;
+}
+
+.bold {
+    font-weight: $font-weight;
+}
+
+.left-align {
+    text-align: left
+}
+
+.center {
+    text-align: center
+}
+
+.right-align {
+    text-align: right
+}
+
+.justify {
+    text-align: justify
+}
+
+.nowrap {
+    white-space: nowrap
+}
+
+.truncate {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.inline {
+    display: inline
+}
+
+.block {
+    display: block
+}
+
+.inline-block {
+    display: inline-block
+}
+
+.table {
+    display: table;
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+    th,
+    td {
+      padding: 0.75rem;
+      border-top: 1px solid #eceeef;
+    }
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table
+}
+
+.clearfix:after {
+    clear: both
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+.relative {
+    position: relative
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.pre {
+    word-wrap: break-word;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+}
+
+.fit {
+    width: 100%;
+}
+
+.ck {
+    img {
+        max-width: 100%;
+    }
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex{
+    display: flex;
+}
+//apple no support flex with child float
+.flex-wrap{
+    flex-wrap:wrap;
+    [class^="sm-col"],
+    [class^="md-col"],
+    [class^="lg-col"]{
+        float:none;
+    }
+}
+
+//common end
+
+@include marginAndPaddingBuilder(0, $space-1, $space-2, $space-3, $space-4);
+
+@include gridBuilder('');
+
+@media #{$breakpoint-up-sm} {
+    @include gridBuilder(sm-);
+}
+
+@media #{$breakpoint-up-md} {
+    @include gridBuilder(md-);
+}
+
+@media #{$breakpoint-up-lg} {
+    @include gridBuilder(lg-);
+}
+
+.container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; 
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media #{$breakpoint-only-xs} {
+    .container {
+        padding-left: $container-xs-padding;
+        padding-right: $container-xs-padding;
+    }
+    .xs-hide {
+        display: none;
+    }
+    .mxn2{
+        margin-left: -8px;
+        margin-right: -8px;
+        & > .p2{
+            padding-left:8px;
+            padding-right:8px;
+        }
+    }
+}
+@media #{$breakpoint-only-sm} {
+    .container {
+        max-width: $container-sm-max-width;
+    }
+    .sm-hide {
+        display: none;
+    }
+}
+@media #{$breakpoint-only-md} {
+    .container {
+        max-width: $container-md-max-width;
+    }
+    .md-hide {
+        display: none;
+    }
+}
+@media #{$breakpoint-only-lg} {
+    .container {
+        max-width: $container-lg-max-width;
+    }
+    .lg-hide {
+        display: none;
+    }
+}
+@media #{$breakpoint-only-xl} {
+    .container {
+        max-width: $container-xl-max-width;
+    }
+    .xl-hide {
+        display: none;
+    }
+}
+
+[class*='image-scale-'] {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        display: block;
+    }
+
+    &.image-scale-1by1:before {
+        padding-top: calc(1/1 * 100%);
+    }
+
+    iframe,
+    .contain {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    img.contain {
+        object-fit: cover;
+    }
+}
+
+router-outlet{
+    display: block;
+    height: 0;
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+.rotating:before {
+    animation: rotating 2s linear infinite;
+}
+

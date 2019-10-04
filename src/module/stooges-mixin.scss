@@ -1,0 +1,103 @@
+﻿
+
+@mixin marginAndPaddingBuilder($space...) {
+    $max: length($space);
+    @for $i from 1 through $max {
+        $var: #{nth($space, $i)};
+        .m#{$i - 1} {
+            margin: $var
+        }
+        .mt#{$i - 1} {
+            margin-top: $var
+        }
+        .mr#{$i - 1} {
+            margin-right: $var
+        }
+        .mb#{$i - 1} {
+            margin-bottom: $var
+        }
+        .ml#{$i - 1} {
+            margin-left: $var
+        }
+        .mx#{$i - 1} {
+            margin-left: $var;
+            margin-right: $var
+        }
+        .mxn#{$i - 1} {
+            margin-left: #{'-' + $var};
+            margin-right: #{'-' + $var};
+        }
+        .my#{$i - 1} {
+            margin-top: $var;
+            margin-bottom: $var
+        }
+        .p#{$i - 1} {
+            padding: $var
+        }
+        .pt#{$i - 1} {
+            padding-top: $var
+        }
+        .pr#{$i - 1} {
+            padding-right: $var
+        }
+        .pb#{$i - 1} {
+            padding-bottom: $var
+        }
+        .pl#{$i - 1} {
+            padding-left: $var
+        }
+        .px#{$i - 1} {
+            padding-left: $var;
+            padding-right: $var
+        }
+        .py#{$i - 1} {
+            padding-top: $var;
+            padding-bottom: $var
+        }
+    }
+    .ml-auto {
+        margin-left: auto
+    }
+    .mr-auto {
+        margin-right: auto
+    }
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@mixin gridBuilder($grid) {
+    @for $i from 1 through 12 {
+        .#{$grid}col-#{$i} {
+            flex: 0 0 ($i/12 * 100%);
+            max-width: ($i/12 * 100%);
+        }
+    }
+    
+}
+
+@mixin ellipsis($row, $lineHeight, $fontSize) {
+    -webkit-line-clamp: $row;
+    line-height: $lineHeight;
+    font-size: $fontSize;
+    max-height: $row * $lineHeight * $fontSize;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
