@@ -1,0 +1,20 @@
+// Fonts
+@import './partials/fonts';
+
+// Variables
+@import './partials/variables-bootstrap';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Font Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/utilities';
+@import './partials/topnav';
+@import './partials/sidenav';

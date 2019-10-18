@@ -1,0 +1,37 @@
+// body
+$body-bg-color: #fff;
+
+// sidebar
+$sidebar-width: 250px;
+$sidebar-bg-color: #333;
+$sidebar-li-active-color: #000;
+$sidebar-li-hover-color: #222;
+$sidebar-li-inner-color: #202020;
+$sidebar-li-inner-hover-color: #111;
+$sidebar-text-color: #fff;
+
+// top nav
+$nav-top-height: 55px;
+$nav-top-color: #b71d25;
+$nav-brand-color: #fff;
+$nav-brand-img-width: 30px;
+$nav-brand-img-height: 30px;
+
+// menu
+$menu-item-bg-color: #ddd;
+$menu-item-bg-color-active: darken($menu-item-bg-color, 25%);
+$menu-item-color: #222;
+$menu-item-color-active: #fff;
+
+// card
+$card-bg-color: #fff;
+$card-header-bg-color: #8c6246;
+$card-header-color: #fff;
+
+// pagination
+$pag-color: #007bff;
+
+
+// sweet alert variables
+$btn-danger-color: #dc3545;
+$btn-success-color: #28a745;

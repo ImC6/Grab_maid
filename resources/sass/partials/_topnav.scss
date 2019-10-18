@@ -1,0 +1,50 @@
+#nav-top {
+    height: $nav-top-height;
+    background-color: $nav-top-color;
+    justify-content: normal;
+
+    .navbar-brand {
+        color: $nav-brand-color;
+
+        &::after {
+            content: '';
+        }
+
+        &:hover {
+            color: darken($nav-brand-color, 10%);
+        }
+
+        .flag-my {
+            display: inline-block;
+            background-image: url('https://via.placeholder.com/60x30');
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 10px;
+            width: $nav-brand-img-width;
+            height: $nav-brand-img-height;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        @include media-breakpoint-up(sm) {
+            &::after {
+                content: " Grabmaid's Admin";
+            }
+        }
+    }
+
+    > button {
+        position: absolute;
+        left: $nav-brand-img-width * 2;
+
+        @include media-breakpoint-up(sm) {
+            left: $sidebar-width;
+        }
+    }
+
+    form {
+        position: absolute;
+        right: 0px;
+    }
+}
