@@ -31,7 +31,7 @@
         "es6-promise": "^4.2.5",
         "imagemin": "^6.1.0",
         "js-cookie": "^2.2.0",
-        "moment": "^2.22.2",
+        "moment": "^2.29.4",
         "query-string": "^6.2.0",
         "react-router-dom": "^4.3.1",
         "react-select": "^2.4.4",
